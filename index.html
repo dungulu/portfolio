@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Denis Ndung'u portfolio</title>
+
+<style>
+
+header {
+	font-family: tahoma;
+	color:rgba(244,7,11,1.00);
+	}
+
+#under_construction, header {
+	left: 10px;
+	animation: header 15s infinite;
+	animation-delay: 5s;
+	position:absolute;
+		}
+
+@keyframes header {
+	0% {left: 10px;  }
+	50% {left: 660px; letter-spacing: 2em; font-size: 5px; }
+	100% { left:10px;}
+	}
+	
+#name {
+	position: absolute;
+	top: 0px;
+	left:13px;
+	font-family: tahoma;
+	font-size:50px;
+	color:rgba(255,255,255,1.00);
+	animation-name: change_title_color;
+		}
+
+#redBox{
+			width:660px;
+			height: 70px;
+			top: 35px;
+			background-color:rgba(244,7,11,1.00);
+			position: absolute;
+			animation: moveName 6s ;
+			z-index: -1;
+			}
+			
+@keyframes moveName {
+   0% {left: 0px; width: 660px;}
+   50% {left: 410px; width: 1px;}
+   75% { left: 410px; width: 250px;}
+	100% {left: 0px; width: 660px; }
+	}
+	
+#graphic_Design_Button {
+	
+	background-color: rgba(244,7,11,1.00);
+	position: absolute;
+	top: 302px;
+	left: 49px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-family: tahoma;
+	color: rgba(255,255,255,1.00);
+	font-size: 56px;
+	font-weight: 600;
+	text-align:center;
+	cursor: pointer;
+	border: none;
+	transition: top 2s, font-size 2s;
+		 }
+		
+	#graphic_Design_Button:hover{
+		top: 310px;
+		font-size: 72px;
+		color:rgba(220,214,215,1.00)
+		}
+	
+
+		
+#apparel_Design_Button {
+	
+	background-color: rgba(244,7,11,1.00);
+	position: absolute;
+	top: 300px;
+	left: 650px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-family: tahoma;
+	color: rgba(255,255,255,1.00);
+	font-size: 56px;
+	font-weight: 600;
+	text-align:center;
+		cursor: pointer;
+		border: none;
+		transition: top 2s, font-size 2s;
+
+	 }
+
+		#apparel_Design_Button:hover{
+			top: 310px;
+					font-size: 72px;
+				color:rgba(220,214,215,1.00)
+}
+
+#logo_design {
+	position:absolute;
+	top: 250px;
+	
+    border: none;
+		font-family: tahoma;
+	color: rgba(255,255,255,1.00);
+	font-size: 26px;
+	font-weight: 600;
+	text-align:center;
+		cursor: pointer;
+		border: none;
+}
+
+#poster_design {
+	position:absolute;
+	top: 250px;
+	left: 100px;
+    border: none;
+		font-family: tahoma;
+	color: rgba(255,255,255,1.00);
+	font-size: 26px;
+	font-weight: 600;
+	text-align:center;
+		cursor: pointer;
+		border: none;
+		}
+		
+	#business_card_design {
+	position: absolute;
+	top: 252px;
+	left: 225px;
+	border: none;
+	font-family: tahoma;
+	color: rgba(255,255,255,1.00);
+	font-size: 26px;
+	font-weight: 600;
+	text-align: center;
+	cursor: pointer;
+	border: none;
+}
+		
+</style >
+</head>
+
+<body>
+<div id="redBox"></div>
+	<h1 id="name">Denis Ndung'u | Portfolio</h1>
+	
+<div id="under_construction">
+</div>
+
+<header class="head">UNDER CONSTRUCTION</header>
+ 
+    
+<button class="button "id="graphic_Design_Button" onClick="display_menu()">graphic design</button>
+	
+	<script>
+	function display_menu() {
+		document.getElementById("apparel_Design_Button").style.color = "yellow";
+				document.getElementById("apparel_Design_Button").style.visibility = "hidden";
+	}
+</script>
+
+<button class="button" id="apparel_Design_Button">apparel design</button>
+<button id="logo_design">logo </button>
+<button id="poster_design">poster </button>
+<button id="business_card_design">business card</button>
+
+</body>
+</html>
