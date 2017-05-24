@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>Denis Ndung'u portfolio</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
 
 <style>
 
@@ -77,54 +79,27 @@ header {
 		color:rgba(220,214,215,1.00)
 		}
 	
-
+.graphic_design_menu{
+	display: none;
+	}
 		
-#apparel_Design_Button {
-	
-	background-color: rgba(244,7,11,1.00);
-	position: absolute;
-	top: 300px;
-	left: 650px;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	font-family: tahoma;
-	color: rgba(255,255,255,1.00);
-	font-size: 56px;
-	font-weight: 600;
-	text-align:center;
-		cursor: pointer;
-		border: none;
-		transition: top 2s, font-size 2s;
-
-	 }
-
-		#apparel_Design_Button:hover{
-			top: 310px;
-					font-size: 72px;
-				color:rgba(220,214,215,1.00)
-}
-
 #logo_design {
 	position:absolute;
 	top: 250px;
 	
     border: none;
 		font-family: tahoma;
-	color: rgba(255,255,255,1.00);
+	color:rgba(255,255,255,1.00);
 	font-size: 26px;
 	font-weight: 600;
 	text-align:center;
 		cursor: pointer;
-		border: none;
 }
 
 #poster_design {
 	position:absolute;
 	top: 250px;
 	left: 100px;
-    border: none;
 		font-family: tahoma;
 	color: rgba(255,255,255,1.00);
 	font-size: 26px;
@@ -145,7 +120,6 @@ header {
 	font-weight: 600;
 	text-align: center;
 	cursor: pointer;
-	border: none;
 }
 		
 </style >
@@ -163,17 +137,18 @@ header {
     
 <button class="button "id="graphic_Design_Button" onClick="display_menu()">graphic design</button>
 	
-	<script>
-	function display_menu() {
-		document.getElementById("apparel_Design_Button").style.color = "yellow";
-				document.getElementById("apparel_Design_Button").style.visibility = "hidden";
-	}
-</script>
 
-<button class="button" id="apparel_Design_Button">apparel design</button>
-<button id="logo_design">logo </button>
+<script>
+	$(document).ready(function(){
+		$("#graphic_Design_Button").click(function(){
+			$(".graphic_design_menu").toggle(1000);
+		});
+	});
+        </script>
+<div class="graphic_design_menu">
+  <button id="logo_design">logo </button>
 <button id="poster_design">poster </button>
 <button id="business_card_design">business card</button>
-
+</div>
 </body>
 </html>
