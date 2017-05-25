@@ -1,154 +1,104 @@
 <!doctype html>
 <html>
+
 <head>
 <meta charset="utf-8">
-<title>Denis Ndung'u portfolio</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-</script>
-
+<title>jennyJohansen portfolio</title>
 <style>
-
-header {
-	font-family: tahoma;
-	color:rgba(244,7,11,1.00);
-	}
-
-#under_construction, header {
-	left: 10px;
-	animation: header 15s infinite;
-	animation-delay: 5s;
+										/*introduction*/
+#intro{
 	position:absolute;
-		}
-
-@keyframes header {
-	0% {left: 10px;  }
-	50% {left: 660px; letter-spacing: 2em; font-size: 5px; }
-	100% { left:10px;}
+	top:400px;
+	left:600px;
+font-family: 'Myriad Pro';
+	color: #27b5cb;
+	font-size: 18px;
+	font-weight: 400;	
 	}
-	
-#name {
-	position: absolute;
-	top: 0px;
-	left:13px;
-	font-family: tahoma;
-	font-size:50px;
-	color:rgba(255,255,255,1.00);
-	animation-name: change_title_color;
-		}
-
-#redBox{
-			width:660px;
-			height: 70px;
-			top: 35px;
-			background-color:rgba(244,7,11,1.00);
-			position: absolute;
-			animation: moveName 6s ;
-			z-index: -1;
-			}
-			
-@keyframes moveName {
-   0% {left: 0px; width: 660px;}
-   50% {left: 410px; width: 1px;}
-   75% { left: 410px; width: 250px;}
-	100% {left: 0px; width: 660px; }
-	}
-	
-#graphic_Design_Button {
-	
-	background-color: rgba(244,7,11,1.00);
-	position: absolute;
-	top: 302px;
-	left: 49px;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	font-family: tahoma;
-	color: rgba(255,255,255,1.00);
-	font-size: 56px;
-	font-weight: 600;
-	text-align:center;
-	cursor: pointer;
-	border: none;
-	transition: top 2s, font-size 2s;
-		 }
-		
-	#graphic_Design_Button:hover{
-		top: 310px;
-		font-size: 72px;
-		color:rgba(220,214,215,1.00)
-		}
-	
-.graphic_design_menu{
-	display: none;
-	}
-		
-#logo_design {
+#sandra_bullock{
 	position:absolute;
-	top: 250px;
+	top:400px;
+	left:970px;
+font-family: 'Myriad Pro';
+	color: #27b5cb;
+	font-size: 18px;
+	font-weight: 400;	
+	}
+									/*side information*/
 	
-    border: none;
-		font-family: tahoma;
-	color:rgba(255,255,255,1.00);
-	font-size: 26px;
-	font-weight: 600;
-	text-align:center;
-		cursor: pointer;
+#digital_designer_vertical{
+	font-family: 'Myriad Pro';
+	color:rgba(39,197,225,1.00);
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	transform: matrix(0,-1,1,0,-650,-110);
+	animation: enter_left 2s ;
+	animation-delay: 3s;
 }
+	@keyframes enter_left {
+		0%{transform: matrix(0,-1,1,0,-700,-110);}
+		100%{transform: matrix(0,-1,1,0,-650,-110); color:rgba(39,181,203,1.00);}
+		}
 
-#poster_design {
+#location{
+	font-family: 'Myriad Pro';
+	color: #27b5cb;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	transform: matrix(0,-1,1,0,-650,-320);
+}
+#name{
+	font-family: 'Myriad Pro';
+	color: #27b5cb;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	transform: matrix(0,-1,1,0,-650,-510);
+}
+										/*under construction*/
+img{
 	position:absolute;
-	top: 250px;
-	left: 100px;
-		font-family: tahoma;
-	color: rgba(255,255,255,1.00);
-	font-size: 26px;
-	font-weight: 600;
-	text-align:center;
-		cursor: pointer;
-		border: none;
+	left:200px;
+	animation: spin 90s infinite;
+	animation-timing-function:linear;
 		}
 		
-	#business_card_design {
+@keyframes spin{
+	0%{transform:rotate(3600deg); }
+	}
+										/*stick button*/
+#stick {
+	width: 1px;
+	height: 116px;
+	left: 721px;
+	top: 550px;
 	position: absolute;
-	top: 252px;
-	left: 225px;
 	border: none;
-	font-family: tahoma;
-	color: rgba(255,255,255,1.00);
-	font-size: 26px;
-	font-weight: 600;
-	text-align: center;
-	cursor: pointer;
 }
-		
-</style >
+</style>
 </head>
 
 <body>
-<div id="redBox"></div>
-	<h1 id="name">Denis Ndung'u | Portfolio</h1>
-	
-<div id="under_construction">
+<div id="intro">
+  <p >
+I’M A DIGITAL DESIGNER  from <br> Nairobi, where I work as a freelance Designer.<br> With a background in digital marketing, my<br> strength lies in website and apparel design.</p>
+</div>
+<p id="sandra_bullock">If you want to know more about me, my work <br>or if youʼre Sandra Bullock, feel free to contact <br>me on denisgithae at yahoo.com.
+</p>
+
+	<img src="under_construction.png" width="400" height="400" alt=""/>
+
+<div class="side_info">
+  <p id="digital_designer_vertical">DIGITAL DESIGNER</p>
+<p id="location">NAIROBI KENYA</p>
+<p id="name">DENIS N GITHAE</p>
+<div id="h-intro-line-container">
 </div>
 
-<header class="head">UNDER CONSTRUCTION</header>
- 
-    
-<button class="button "id="graphic_Design_Button" onClick="display_menu()">graphic design</button>
-	
 
-<script>
-	$(document).ready(function(){
-		$("#graphic_Design_Button").click(function(){
-			$(".graphic_design_menu").toggle(1000);
-		});
-	});
-        </script>
-<div class="graphic_design_menu">
-  <button id="logo_design">logo </button>
-<button id="poster_design">poster </button>
-<button id="business_card_design">business card</button>
 </div>
+
 </body>
 </html>
