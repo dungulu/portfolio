@@ -8,7 +8,7 @@
 										/*introduction*/
 #intro{
 	position:absolute;
-	top:400px;
+	top:50%;
 	left:600px;
 font-family: 'Myriad Pro';
 	color: #27b5cb;
@@ -17,7 +17,7 @@ font-family: 'Myriad Pro';
 	}
 #sandra_bullock{
 	position:absolute;
-	top:400px;
+	top:50%;
 	left:970px;
 font-family: 'Myriad Pro';
 	color: #27b5cb;
@@ -26,41 +26,40 @@ font-family: 'Myriad Pro';
 	}
 									/*side information*/
 	
-#digital_designer_vertical{
-	font-family: 'Myriad Pro';
-	color:rgba(39,197,225,1.00);
-	font-size: 14px;
-	font-weight: 400;
-	letter-spacing: 2px;
-	transform: matrix(0,-1,1,0,-650,-110);
-	animation: enter_left 2s ;
-	animation-delay: 3s;
-}
-	@keyframes enter_left {
-		0%{transform: matrix(0,-1,1,0,-700,-110);}
-		100%{transform: matrix(0,-1,1,0,-650,-110); color:rgba(39,181,203,1.00);}
-		}
 
-#location{
-	font-family: 'Myriad Pro';
-	color: #27b5cb;
-	font-size: 14px;
-	font-weight: 400;
-	letter-spacing: 2px;
-	transform: matrix(0,-1,1,0,-650,-320);
+#left {
+	position: absolute;
+	left: 0;
+	top:-6vh;
+	margin: 6vh;
+	width: 90vh;
+	transform-origin: top left;
+	transform: rotate(-90deg) translate3d(-100%,0,0);
+	font-size: calc(.42rem + .42vw);
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color:rgba(45,187,217,1.00);
+	list-style-type:none;
+	overflow:hidden;
+	
+	}
+	
+#left_left {
+    position: absolute;
+    top: 0;
+    left: 6.5vh; 
+	}
+#left_center {
+    text-align: center;
 }
-#name{
-	font-family: 'Myriad Pro';
-	color: #27b5cb;
-	font-size: 14px;
-	font-weight: 400;
-	letter-spacing: 2px;
-	transform: matrix(0,-1,1,0,-650,-510);
+#left_right {
+    position: absolute;
+    top: 0;
+    right: 6.5vh;
 }
 										/*under construction*/
 img{
 	position:absolute;
-	left:200px;
+	right:200px;
 	animation: spin 90s infinite;
 	animation-timing-function:linear;
 		}
@@ -69,25 +68,20 @@ img{
 	0%{transform:rotate(3600deg); }
 	}
 										/*stick button*/
-#h-intro-line-container{
+	#stick{
 	position:absolute;
 	left: 50%;
 	bottom: 0;
-	width: 60px;
+	width: 6px;
 	height: 60px;
+	margin:	0 0 0 -30px;
 	cursor: pointer;
 	overflow:hidden;
+	background-color:rgba(45,187,217,1.00);
+	transition: height 1.2s cubic-bezier(.165,.84,.44,1);
 	}
-	
-#stick {
-	position:relative;
-	width: 1px;
-	height: 60.58px;
-	background-color:rgba(0,0,0,1.00);
-	}
-	
-	#h-intro-line-container:hover{
-		transform:translatey(-8px);
+	#stick:hover{
+		height: 45px;
 	}
 </style>
 </head>
@@ -100,18 +94,56 @@ I’M A DIGITAL DESIGNER  from <br> Nairobi, where I work as a freelance Designe
 <p id="sandra_bullock">If you want to know more about me, my work <br>or if youʼre Sandra Bullock, feel free to contact <br>me on denisgithae at yahoo.com.
 </p>
 
-	<img src="under_construction.png" width="400" height="400" alt=""/>
+	<img src="under_construction.png" width="200" height="200" alt=""/>
 
-<div class="side_info">
-  <p id="digital_designer_vertical">DIGITAL DESIGNER</p>
-<p id="location">NAIROBI KENYA</p>
-<p id="name">DENIS N GITHAE</p>
-<div id="h-intro-line-container">
-<div id="stick" >
+	<div id="stick">
 </div>
+<header>	
+	<ul id="left">
+    	<li id="left_left" style="transform: translate3d(0px, 0%, 0px);">DIGITAL DESIGNER</li>
+    	<li id="left_center" style="transform: translate3d(0px, 0%, 0px);">NAIROBI | KENYA</li>
+        <li id="left_right" style="transform: translate3d(0px, 0%, 0px);">DENIS N GITHAE</li>
+        </ul>
+    </header>
+    									<!--DENO-->
+ <svg width="522" height="500" viewbox="100 270 322 393"; xmlns="http://www.w3.org/2000/svg">
+  <clipPath id="d">
+ 	
+	<path d="M206.1,478.7h-3.4h-37.6l3.4-2.6V310.9l-3.4-2.6h37.6v167.8L206.1,478.7z M290.4,437.1c-9.2,18.4-22.2,30.5-35,36.3
+		c-7.3,3.4-14.9,4.9-23.3,5.3c4.5-2.1,7.9-5.3,10.7-9.8c8.5-14.3,11.3-31.4,12-48c0.4-9,0.4-17.9,0.2-26.9c0.2-9,0.2-17.9-0.2-26.9
+		c-0.6-16.7-3.4-33.7-12-48c-2.8-4.5-6.2-7.7-10.7-9.8c8.3,0.4,16,1.9,23.3,5.3c12.8,5.8,25.8,17.9,35,36.3
+		c5.8,11.5,9,26.7,9.4,43.1C299.4,410.4,296.2,425.6,290.4,437.1z"/>
 
-
-</div>
-
+</clipPath>
+<clipPath id="e">
+	<path d="M371.5,471.9c0,2.8,1.3,5.1,3.4,6.8h-37.6H334c2.1-1.7,3.4-4.1,3.4-6.8V315.2c0-2.8-1.3-5.1-3.4-6.8h3.4h34.2V471.9z
+		 M413,365.8v-0.2c0.2-0.6,0.6-1.9,0.9-3.6v52.5c-0.2-1.7-0.6-3-0.9-3.6c-5.3-14.1-13-20.9-26.3-22.8
+		C399.9,386.3,407.6,379.7,413,365.8z M391,308.4h49.5v49.7C438.8,347.6,430.3,311.8,391,308.4z M446.9,425.8v52.9H391
+		C402.5,477,443.1,467.8,446.9,425.8z"/>
+</clipPath>
+<clipPath id="n">
+	<path d="M187.7,662.3h-40.8c20.3-12.4,21.1-48.7,21.1-48.7C169.6,652.1,187.7,662.3,187.7,662.3z M268.2,662.1h-24.8l-1.5-2.6
+		l-80.9-165l-0.2-0.4l-5.3-2.3h4.3h39.1l62.8,127.9l6.6-26.9V662.1z M268.6,534.2c-1.5-33.5-19.4-42.5-19.4-42.5h40.6
+		C269.5,502.6,268.6,534.2,268.6,534.2z"/>
+	 </clipPath>
+<clipPath id="o">
+	<path d="M363.6,528.3c-1.1,11.3-1.1,25.2-1.1,46.8c0,26,0,47,2.1,61.1c1.9,14.3,5.8,22.2,13,25.8c0,0.2,0.2,0.2,0.2,0.2
+		c-6.8-0.4-7.7-1.5-14.5-4.1c-13-4.7-23.3-14.3-31.4-29.5c-3.4-6.4-6.4-14.5-8.3-23.5c-1.9-8.8-3-18.6-3-27.8
+		c0-17.3,3.6-33.5,9.8-45.7c9.6-17.9,20.3-29,33.7-34.8c7.7-3.2,9.6-4.7,18.4-5.1c-4.7,2.1-8.3,5.1-11.1,9.6
+		C367.3,508,364.9,516.1,363.6,528.3z M465.1,577.4c0,9.2-1.1,19-3.2,27.8c-1.9,9-4.7,17.1-8.3,23.5c-7.9,15.2-18.1,24.8-31.4,29.5
+		c-6.6,2.6-7.5,3.6-14.3,4.1l0.2-0.2c7.3-3.6,11.1-11.5,13-25.8c1.9-14.1,2.1-35,2.1-61.1c0-21.6,0-35.4-1.3-46.8
+		c-1.1-12.2-3.4-20.3-7.7-26.9c-2.8-4.5-6.6-7.5-11.3-9.6c8.8,0.4,10.7,1.9,18.6,5.1c13.2,5.8,23.9,16.9,33.5,34.8
+		C461.4,543.9,465.1,560.1,465.1,577.4z M407.6,662.1h0.2H407.6z"/>
+</clipPath>
+ 
+ <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientTransform="rotate(90)">
+  <stop offset="0%" style="stop-color:#ff3000"></stop >
+   <stop offset="100%" style="stop-color:#d50082"></stop >
+</linearGradient>
+ <rect width="722" height="693" fill="url(#gradient)" clip-path="url(#d)"/>
+  <rect width="722" height="693" fill="url(#gradient)" clip-path="url(#e)"/>
+  <rect width="722" height="693" fill="url(#gradient)" clip-path="url(#n)"/>
+    <rect width="722" height="693" fill="url(#gradient)" clip-path="url(#o)"/>
+</svg>										
 </body>
 </html>
