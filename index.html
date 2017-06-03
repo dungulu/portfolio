@@ -1,149 +1,290 @@
 <!doctype html>
 <html>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
 <head>
 <meta charset="utf-8">
 <title>Denis Githae portfolio</title>
 <style>
-										/*introduction*/
-#intro{
-	position:absolute;
-	top:50%;
-	left:600px;
-font-family: 'Myriad Pro';
+/*introduction*/
+#intro {
+	position: absolute;
+	top: 50%;
+	left: 600px;
+	font-family: 'Myriad Pro';
 	color: #27b5cb;
 	font-size: 18px;
-	font-weight: 400;	
-	}
-#sandra_bullock{
-	position:absolute;
-	top:50%;
-	left:970px;
-font-family: 'Myriad Pro';
+	font-weight: 400;
+	animation: slideUp 1.2s;
+}
+#sandra_bullock {
+	position: absolute;
+	top: 50%;
+	left: 970px;
+	font-family: 'Myriad Pro';
 	color: #27b5cb;
 	font-size: 18px;
-	font-weight: 400;	
+	font-weight: 400;
+	animation: slideUp 0.8s;
+}
+	@keyframes slideUp{
+		0%{ opacity: 0; top: 60%;}
+		100%{ opacity: 1; top: 50%;}
 	}
-									/*side information*/
+/*side information*/
 	
 
 #left {
 	position: absolute;
-	left: 0;
-	top:-6vh;
+	top: -6vh;
 	margin: 6vh;
 	width: 90vh;
 	transform-origin: top left;
-	transform: rotate(-90deg) translate3d(-100%,0,0);
+	transform: rotate(-90deg) translate3d(-100%, 0, 0);
 	font-size: calc(.42rem + .42vw);
-	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color:rgba(45,187,217,1.00);
-	list-style-type:none;
-	overflow:hidden;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: rgba(45,187,217,1.00);
+	list-style-type: none;
+	overflow: hidden;
+animation: appear 1.2s;
 	
+	}
+	@keyframes appear {
+		0%{ opacity: 0;}
+		50%{ opacity: 0.4;}
+		100%{ opacity: 1;}
 	}
 	
 #left_left {
-    position: absolute;
-    top: 0;
-    left: 6.5vh; 
-	}
+	position: absolute;
+	top: 0;
+	left: 6.5vh;
+}
 #left_center {
-    text-align: center;
+	text-align: center;
 }
 #left_right {
-    position: absolute;
-    top: 0;
-    right: 6.5vh;
+	position: absolute;
+	top: 0;
+	right: 6.5vh;
 }
-										/*under construction*/
-img{
-	position:absolute;
-	right:200px;
+/*under construction*/
+img {
+	position: absolute;
+	right: 200px;
 	animation: spin 90s infinite;
-	animation-timing-function:linear;
-		}
-		
-@keyframes spin{
-	0%{transform:rotate(3600deg); }
-	}
-										/*stick button*/
-	#stick{
-	position:absolute;
+	animation-timing-function: linear;
+}
+ @keyframes spin {
+ 0% {transform:rotate(3600deg);
+}
+}
+/*stick button*/
+#stick {
+	position: absolute;
 	left: 50%;
-	bottom: 0;
-	width: 6px;
-	height: 60px;
-	margin:	0 0 0 -30px;
+	bottom: 0%;
+	width: 4px;
+	height: 5.24vw;
+	margin: 0 0 0 -30px;
 	cursor: pointer;
-	overflow:hidden;
-	background-color:rgba(45,187,217,1.00);
-	transition: height 1.2s cubic-bezier(.165,.84,.44,1);
+	overflow: hidden;
+	background: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+	transition: height 1.2s cubic-bezier(.165, .84, .44, 1);
+	animation: popUp 1.4s;
+	animation-timing-function: cubic-bezier(.165,.84,.44,1);
+}
+	@keyframes popUp{
+		0%{ height: 8vw; }
+		50%{ height: 1vw; }
+		75%{ height: 6.5vw;}
+		100%{ height: 5.24vw; }
 	}
-	#stick:hover{
-		height: 45px;
+#stick:hover {
+	height: 45px;
+}
+<!--
+BURGER MENU----------------------------------------------------------------------------------------------------------------------> body {
+	position: relative;
+}
+#border {
+	position: absolute;
+	top: 50px;
+	right: 50px;
+	cursor: pointer;
+}
+#box {
+	position: absolute;
+	top: 60px;
+	box-sizing: border-box;
+	animation: backgroundFlash .8s ;
+	animation-timing-function: cubic-bezier(.170 ,.84,.44,1)
+}
+	@keyframes backgroundFlash{
+		0%{  top: 0%; height: 60px;}
+		100%{ height:  0px;	top: 0px;}
 	}
+#border_top {
+	position: absolute;
+	top: 0px;
+	background: #ff3000;
+	height: 1px;
+	width: 60px;
+}
+#border_right {
+	position: absolute;
+	right: 0px;
+	background: #ff3000;
+	height: 60px;
+	width: 1px;
+}
+#border_bottom {
+	position: absolute;
+	top: 60px;
+	background: #ff3000;
+	height: 1px;
+	width: 60px;
+}
+#border_left {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: #ff3000;
+	height: 60px;
+	width: 1px;
+}
+#line0 {
+	position: relative;
+	left: 18px;
+	top: 27px;
+	background: black;
+	animation: slideRight 0.8s;
+
+}
+#line1 {
+	position: relative;
+	left: 18px;
+	top: 30px;
+	background: black;
+	animation: slideRight 1s;
+}
+#line2 {
+	position: relative;
+	left: 18px;
+	top: 33px;
+	background: black;
+	animation: slideRight 1.2s;
+}
+	@keyframes slideRight{
+		0%{left: -50px; background: white;}
+		50%{background: white;}
+		100%{ left: 18px; background: black;}
+	}
+	.borderWrap{
+	animation: showBorderLines 2s;
+		}
+	@keyframes showBorderLines{
+		0%{ opacity: 0;}
+		100%{ opacity: 1;}
+	}
+	
 </style>
+<!---------------------------------------------------------------------------------------------------------------------------BODY-->
 </head>
 
-<body>
-<div id="intro">
-  <p >
-I’M A DIGITAL DESIGNER  from <br> Nairobi, where I work as a freelance Designer.<br> With a background in digital marketing, my<br> strength lies in website and apparel design.</p>
-</div>
-<p id="sandra_bullock">If you want to know more about me, my work <br>or if youʼre Sandra Bullock, feel free to contact <br>me on denisgithae at yahoo.com.
-</p>
+<body id="body" >
 
-	<img src="under_construction.png" width="200" height="200" alt=""/>
-
-	<div id="stick">
+<div id="intro" >
+  <p > I’M A DIGITAL DESIGNER  from <br>
+    Nairobi, where I work as a freelance Designer.<br>
+    With a background in branding, my<br>
+    strength lies in graphic and apparel design.</p>
+ 
 </div>
-<header>	
-	<ul id="left">
-    	<li id="left_left" style="transform: translate3d(0px, 0%, 0px);">DIGITAL DESIGNER</li>
-    	<li id="left_center" style="transform: translate3d(0px, 0%, 0px);">NAIROBI | KENYA</li>
-        <li id="left_right" style="transform: translate3d(0px, 0%, 0px);">DENIS N GITHAE</li>
-        </ul>
-    </header>
-    									<!--DENO-->
- <svg width="522" height="500" viewbox="100 270 322 393"; xmlns="http://www.w3.org/2000/svg">
+<p id="sandra_bullock">If you want to know more about me, my work <br>
+  or if youʼre Sandra Bullock, feel free to contact <br>
+  me on denisgithae at yahoo.com. </p>
+<img id="spin"src="under_construction.png" width="200" height="200" alt=""/>
+<div class="under_construction" id="stick" >
+	 </div>
+<header>
+  <ul id="left">
+    <li id="left_left" style="transform: translate3d(0px, 0%, 0px);">DIGITAL DESIGNER</li>
+    <li id="left_center" style="transform: translate3d(0px, 0%, 0px);">NAIROBI | KENYA</li>
+    <li id="left_right" style="transform: translate3d(0px, 0%, 0px);">DENIS N GITHAE</li>
+  </ul>
+</header>
+<!--DENO-->
+<svg width="522" height="500" viewbox="100 270 322 393"; xmlns="http://www.w3.org/2000/svg">
   <clipPath id="d">
- 	
-	<path d="M206.1,478.7h-3.4h-37.6l3.4-2.6V310.9l-3.4-2.6h37.6v167.8L206.1,478.7z M290.4,437.1c-9.2,18.4-22.2,30.5-35,36.3
+    <path d="M206.1,478.7h-3.4h-37.6l3.4-2.6V310.9l-3.4-2.6h37.6v167.8L206.1,478.7z M290.4,437.1c-9.2,18.4-22.2,30.5-35,36.3
 		c-7.3,3.4-14.9,4.9-23.3,5.3c4.5-2.1,7.9-5.3,10.7-9.8c8.5-14.3,11.3-31.4,12-48c0.4-9,0.4-17.9,0.2-26.9c0.2-9,0.2-17.9-0.2-26.9
 		c-0.6-16.7-3.4-33.7-12-48c-2.8-4.5-6.2-7.7-10.7-9.8c8.3,0.4,16,1.9,23.3,5.3c12.8,5.8,25.8,17.9,35,36.3
 		c5.8,11.5,9,26.7,9.4,43.1C299.4,410.4,296.2,425.6,290.4,437.1z"/>
-
-</clipPath>
-<clipPath id="e">
-	<path d="M371.5,471.9c0,2.8,1.3,5.1,3.4,6.8h-37.6H334c2.1-1.7,3.4-4.1,3.4-6.8V315.2c0-2.8-1.3-5.1-3.4-6.8h3.4h34.2V471.9z
+  </clipPath>
+  <clipPath id="e">
+    <path d="M371.5,471.9c0,2.8,1.3,5.1,3.4,6.8h-37.6H334c2.1-1.7,3.4-4.1,3.4-6.8V315.2c0-2.8-1.3-5.1-3.4-6.8h3.4h34.2V471.9z
 		 M413,365.8v-0.2c0.2-0.6,0.6-1.9,0.9-3.6v52.5c-0.2-1.7-0.6-3-0.9-3.6c-5.3-14.1-13-20.9-26.3-22.8
 		C399.9,386.3,407.6,379.7,413,365.8z M391,308.4h49.5v49.7C438.8,347.6,430.3,311.8,391,308.4z M446.9,425.8v52.9H391
 		C402.5,477,443.1,467.8,446.9,425.8z"/>
-</clipPath>
-<clipPath id="n">
-	<path d="M187.7,662.3h-40.8c20.3-12.4,21.1-48.7,21.1-48.7C169.6,652.1,187.7,662.3,187.7,662.3z M268.2,662.1h-24.8l-1.5-2.6
+  </clipPath>
+  <clipPath id="n">
+    <path d="M187.7,662.3h-40.8c20.3-12.4,21.1-48.7,21.1-48.7C169.6,652.1,187.7,662.3,187.7,662.3z M268.2,662.1h-24.8l-1.5-2.6
 		l-80.9-165l-0.2-0.4l-5.3-2.3h4.3h39.1l62.8,127.9l6.6-26.9V662.1z M268.6,534.2c-1.5-33.5-19.4-42.5-19.4-42.5h40.6
 		C269.5,502.6,268.6,534.2,268.6,534.2z"/>
-	 </clipPath>
-<clipPath id="o">
-	<path d="M363.6,528.3c-1.1,11.3-1.1,25.2-1.1,46.8c0,26,0,47,2.1,61.1c1.9,14.3,5.8,22.2,13,25.8c0,0.2,0.2,0.2,0.2,0.2
+  </clipPath>
+  <clipPath id="o">
+    <path d="M363.6,528.3c-1.1,11.3-1.1,25.2-1.1,46.8c0,26,0,47,2.1,61.1c1.9,14.3,5.8,22.2,13,25.8c0,0.2,0.2,0.2,0.2,0.2
 		c-6.8-0.4-7.7-1.5-14.5-4.1c-13-4.7-23.3-14.3-31.4-29.5c-3.4-6.4-6.4-14.5-8.3-23.5c-1.9-8.8-3-18.6-3-27.8
 		c0-17.3,3.6-33.5,9.8-45.7c9.6-17.9,20.3-29,33.7-34.8c7.7-3.2,9.6-4.7,18.4-5.1c-4.7,2.1-8.3,5.1-11.1,9.6
 		C367.3,508,364.9,516.1,363.6,528.3z M465.1,577.4c0,9.2-1.1,19-3.2,27.8c-1.9,9-4.7,17.1-8.3,23.5c-7.9,15.2-18.1,24.8-31.4,29.5
 		c-6.6,2.6-7.5,3.6-14.3,4.1l0.2-0.2c7.3-3.6,11.1-11.5,13-25.8c1.9-14.1,2.1-35,2.1-61.1c0-21.6,0-35.4-1.3-46.8
 		c-1.1-12.2-3.4-20.3-7.7-26.9c-2.8-4.5-6.6-7.5-11.3-9.6c8.8,0.4,10.7,1.9,18.6,5.1c13.2,5.8,23.9,16.9,33.5,34.8
 		C461.4,543.9,465.1,560.1,465.1,577.4z M407.6,662.1h0.2H407.6z"/>
-</clipPath>
- 
- <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientTransform="rotate(90)">
-  <stop offset="0%" style="stop-color:#ff3000"></stop >
-   <stop offset="100%" style="stop-color:#d50082"></stop >
-</linearGradient>
- <rect width="722" height="693" fill="url(#gradient)" clip-path="url(#d)"/>
+  </clipPath>
+  <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientTransform="rotate(90)">
+    <stop offset="0%" style="stop-color:#ff3000"></stop >
+    <stop offset="100%" style="stop-color:#d50082"></stop >
+  </linearGradient>
+  <rect width="722" height="693" fill="url(#gradient)" clip-path="url(#d)"/>
   <rect width="722" height="693" fill="url(#gradient)" clip-path="url(#e)"/>
   <rect width="722" height="693" fill="url(#gradient)" clip-path="url(#n)"/>
-    <rect width="722" height="693" fill="url(#gradient)" clip-path="url(#o)"/>
-</svg>										
+  <rect width="722" height="693" fill="url(#gradient)" clip-path="url(#o)"/>
+</svg>
+<!--BURGER MENU-->
+<div id="border" style=" height:60px;width:60px">
+  <div class="borderWrap"id="border_top"></div>
+  <div  class="borderWrap"id="border_right"></div>
+  <div  class="borderWrap"id="border_bottom"></div>
+  <div class="borderWrap" id="border_left"></div>
+  <div id="box" style="background:-webkit-linear-gradient(-90deg,#ff3000,#ed0200,#ff096c,#d50082);height:0px;width:60px;margin:0px;"> 
+    <script>
+$(document).ready(function(){
+    $("#border").mouseover(function(){
+        $("#box").animate({top: "0px", height:"60px"},"1000");
+    });
+    $("#border").mouseleave(function(){
+		var div = $("#box");
+        div.animate({ height:"0",},"800");
+		div.animate({top:"60px"});
+				});
+  
+});
+</script> 
+  </div>
+  <div class="under_construction" id="line0" style="height:2px; width: 24px"></div>
+  <div class="under_construction" id="line1" style="height:2px; width: 24px"></div>
+  <div class="under_construction" id="line2" style="height:2px; width: 24px"></div>
+  <script>
+	$(document).ready(function(){$(".under_construction").mouseover(function(){
+		var div = $("#spin");
+		
+	div.animate({right:"210px"},"0.8");
+		div.animate({right:"120px"});
+		div.animate({right:"200px"});
+	});
+								});
+	</script> 
+</div>
 </body>
 </html>
